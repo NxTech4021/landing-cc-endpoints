@@ -9,8 +9,6 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn prisma generate
-
 EXPOSE 4002
 
-CMD [ "node", "app.js" ]
+CMD [ "yarn", "start" ]
