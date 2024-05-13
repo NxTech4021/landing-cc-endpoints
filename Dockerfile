@@ -1,4 +1,4 @@
-FROM baseImage
+FROM node
 
 WORKDIR /app
 
