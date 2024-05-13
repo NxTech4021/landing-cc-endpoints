@@ -2,11 +2,11 @@ FROM node
 
 WORKDIR /app
 
-COPY ./yarn.lock ./app
-COPY ./package.json ./app
+COPY ./package.json .
+COPY ./yarn.lock .
 
 RUN yarn install
-RUN yarn prisma generate
+RUN npx prisma generate
 
 COPY . .
 
