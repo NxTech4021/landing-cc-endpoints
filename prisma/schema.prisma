@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Brand {
+  id                      String   @id
+  name                    String
+  email                   String
+  phoneNumber             String
+  companyName             String
+  companySize             String
+  monthlyInfluencerBudget Int
+  industries              String[]
+  otherindustriesString   String?
+}
+
+model Creator {
+  id                   String   @id
+  name                 String
+  email                String
+  pronoun              String
+  nationality          String
+  location             String   @db.VarChar(255)
+  instaUsername        String
+  tiktokUsername       String?
+  interests            String[]
+  phoneNumber          String
+  languages            String[]
+  otherinterestsString String?
+  otherlanguagesString String?
+  dateOfBirth          DateTime
+  employmentType       String
+  otherEmploymentType  String?
+}
