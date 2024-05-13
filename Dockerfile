@@ -10,4 +10,4 @@ RUN npx prisma generate
 
 COPY . .
 
-CMD [ "yarn", "dev" ]
+CMD [ "node", "app.js" ]
