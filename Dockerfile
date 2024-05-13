@@ -6,8 +6,9 @@ COPY ./package.json .
 COPY ./yarn.lock .
 
 RUN yarn install
-RUN npx prisma generate
 
 COPY . .
+
+RUN npx prisma generate
 
 CMD [ "node", "app.js" ]
