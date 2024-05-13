@@ -9,8 +9,6 @@ RUN yarn install
 
 COPY . .
 
-RUN npx prisma init
-
 RUN yarn prisma generate
 
 EXPOSE 4002
