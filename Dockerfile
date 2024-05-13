@@ -9,7 +9,7 @@ RUN yarn install
 
 COPY . .
 
-RUN npx prisma generate
+RUN yarn generate
 
 EXPOSE 4002
 
