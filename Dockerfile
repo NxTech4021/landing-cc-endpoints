@@ -11,4 +11,6 @@ COPY . .
 
 RUN npx prisma generate
 
+EXPOSE 4002
+
 CMD [ "node", "app.js" ]
